@@ -6,6 +6,7 @@ import { connectDB } from './lib/db.js'
 dotenv.config() // to use env file
 const app = express()
 
+app.use(express.json());  // extract json data from body
 app.use('/api/auth', authRoutes)
 
 const port = process.env.PORT
