@@ -52,7 +52,7 @@ export const sendMessage = async (req, res) => {
         image: imageUrl,
     });
 
-    await newMessage.save;
+    await newMessage.save();
 
     //todo : realtime functionaltiy goes here
 
