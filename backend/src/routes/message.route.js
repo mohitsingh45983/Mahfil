@@ -3,7 +3,7 @@ import { protectRoute } from '../middlewares/auth.middleware.js'
 import { getUsersForSidebar ,getMessages, sendMessage} from '../controllers/message.controller.js'
 const router = express.Router()
 
-router.get('/user', protectRoute, getUsersForSidebar)
+router.get('/users', protectRoute, getUsersForSidebar)
 
 router.get('/:id', protectRoute, getMessages)
 
