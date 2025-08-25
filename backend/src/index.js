@@ -9,13 +9,15 @@ import { connectDB } from './lib/db.js'
 dotenv.config() // to use env file
 const app = express()
 
-app.use(express.json()) // extract json data from body
+app.use(express.json({ limit: '10mb' })); // or higher if needed
 app.use(cookieParser())
 
-app.use(cors({
-  origin: "http://localhost:5173",  // your frontend URL
-  credentials: true                // if using cookies/auth
-}));
+app.use(
+  cors({
+    origin: 'http://localhost:5173', // your frontend URL
+    credentials: true, // if using cookies/auth
+  })
+)
 
 app.use('/api/auth', authRoutes)
 
