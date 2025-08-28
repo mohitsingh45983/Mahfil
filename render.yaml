@@ -11,6 +11,8 @@ services:
         value: 20
       - key: NODE_ENV
         value: production
+      - key: NPM_CONFIG_PRODUCTION
+        value: 'false'
       - key: CLIENT_URL
         value: https://mahfil.onrender.com
       # The following should be set via the Render dashboard as secrets
